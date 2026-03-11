@@ -535,16 +535,48 @@ h2 {
 }
 
 .lead {
-  background: #ffffff;
+  background: linear-gradient(180deg, #fff8f3 0%, #ffffff 55%);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.lead-grid {
-  display: grid;
-  grid-template-columns: 1.06fr 0.94fr;
-  gap: 3rem;
+.lead-centered {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+}
+
+.lead-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--accent-soft);
+  border: 1px solid rgba(255, 105, 0, 0.2);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: -0.8rem;
+}
+
+.lead-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.lead-heading {
+  margin: 0;
+  max-width: 700px;
+  text-align: center;
 }
 
 .offer-bento {
@@ -652,12 +684,16 @@ h2 {
 }
 
 .lead-form {
-  border: 1px solid #e2e7f2;
+  border: 1px solid #e8edf7;
   border-top: 4px solid var(--accent);
-  border-radius: 20px;
+  border-radius: 22px;
   background: #ffffff;
-  box-shadow: 0 20px 60px rgba(14, 23, 40, 0.12), 0 4px 16px rgba(255, 105, 0, 0.08);
-  padding: 1.8rem;
+  box-shadow: 0 24px 64px rgba(14, 23, 40, 0.10), 0 4px 16px rgba(255, 105, 0, 0.09);
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .lead-form-header {
@@ -722,9 +758,9 @@ h2 {
 .estimate-display {
   margin: 1.25rem 0;
   padding: 1rem 1.1rem;
-  background: #f4f7ff;
-  border: 1px solid #d6e0ff;
-  border-radius: 10px;
+  background: #fff6ef;
+  border: 1px solid rgba(255, 105, 0, 0.18);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -739,7 +775,7 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #7a8aaa;
+  color: var(--accent-strong);
   margin: 0;
 }
 
@@ -838,7 +874,7 @@ h2 {
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   padding: 0.88rem 0 5.7rem;
