@@ -249,21 +249,21 @@ function renderProjects() {
       <div class="project-body">
         <h3>${project.name}</h3>
         <p class="project-meta">${project.type} | ${project.location} | ${project.size}</p>
-        <div class="metric-grid">
-          <div class="metric">
-            <small>Before Bill</small>
+        <div class="metric-list">
+          <div class="metric-row">
+            <span>Before Bill</span>
             <strong>${project.beforeBill}</strong>
           </div>
-          <div class="metric">
-            <small>After Bill</small>
+          <div class="metric-row">
+            <span>After Bill</span>
             <strong>${project.afterBill}</strong>
           </div>
-          <div class="metric">
-            <small>Project Cost</small>
+          <div class="metric-row">
+            <span>Project Cost</span>
             <strong>${project.projectCost}</strong>
           </div>
-          <div class="metric">
-            <small>ROI / Payback</small>
+          <div class="metric-row">
+            <span>ROI / Payback</span>
             <strong>${project.payback}</strong>
           </div>
         </div>
@@ -278,11 +278,26 @@ function bindEstimatorPreview() {
   if (!billRangeEl || !estimateDisplay) return;
 
   billRangeEl.addEventListener("change", () => {
+    if (!billRangeEl.value) {
+      estimateDisplay.innerHTML = "";
+      return;
+    }
     const estimate = getEstimateByBillRange(billRangeEl.value);
     estimateDisplay.innerHTML = `
-      <p class="estimate-label">Typical outcome for ${billRangeEl.value || "selected bill range"}</p>
-      <h4>Estimated ${estimate.system} system</h4>
-      <p>Potential monthly savings: ${estimate.savings}</p>
+      <p class="estimate-label">Estimated outcome for ${billRangeEl.value}</p>
+      <h4>${estimate.system} system</h4>
+      <div class="estimate-row">
+        <span>Monthly savings</span>
+        <strong>${estimate.savings}</strong>
+      </div>
+      <div class="estimate-row">
+        <span>Annual savings</span>
+        <strong>${estimate.annual}</strong>
+      </div>
+      <div class="estimate-row">
+        <span>Typical bill reduction</span>
+        <strong>20 – 45%</strong>
+      </div>
     `;
   });
 }
