@@ -1149,11 +1149,11 @@ h2 {
     display: inline-flex;
   }
 
-  #testimonials .testimonial-card:nth-child(n+4) {
+  .page-home #testimonials .testimonial-card:nth-child(n+4) {
     display: none;
   }
 
-  #projects .project-card:nth-child(n+5) {
+  .page-home #projects .project-card:nth-child(n+5) {
     display: none;
   }
 }
