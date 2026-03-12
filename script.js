@@ -387,9 +387,40 @@ function bindRevealAnimations() {
   elements.forEach((el) => observer.observe(el));
 }
 
+function bindHamburgerMenu() {
+  const btn = document.getElementById("hamburger-btn");
+  const overlay = document.getElementById("mobile-nav-overlay");
+  if (!btn || !overlay) return;
+
+  function openMenu() {
+    btn.classList.add("is-open");
+    overlay.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    btn.classList.remove("is-open");
+    overlay.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  btn.addEventListener("click", () => {
+    btn.classList.contains("is-open") ? closeMenu() : openMenu();
+  });
+
+  overlay.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}
+
 renderClients();
 renderTestimonials();
 renderProjects();
 bindEstimatorPreview();
 bindLeadForm();
 bindRevealAnimations();
+bindHamburgerMenu();
