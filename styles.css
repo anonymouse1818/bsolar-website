@@ -228,6 +228,10 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
+.hero-cta-mobile {
+  display: none;
+}
+
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -927,27 +931,24 @@ h2 {
   bottom: 0;
   z-index: 80;
   display: none;
-  grid-template-columns: 1fr 1fr;
-  border-top: 1px solid #d5dce9;
+  justify-content: center;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0));
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(8px);
-  padding-bottom: env(safe-area-inset-bottom, 0);
+  border-top: 1px solid #d5dce9;
 }
 
-.mobile-btn {
-  text-align: center;
-  font-weight: 800;
-  padding: 0.94rem 0.62rem;
-}
-
-.mobile-call {
-  color: #1b2a43;
-  background: #f0f4fb;
-}
-
-.mobile-wa {
-  color: #fff;
+.mobile-pill-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: linear-gradient(135deg, var(--accent), #ff8f43);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .hamburger-btn {
@@ -1137,7 +1138,23 @@ h2 {
   }
 
   .mobile-sticky-cta {
-    display: grid;
+    display: flex;
+  }
+
+  .hero-cta-desktop {
+    display: none;
+  }
+
+  .hero-cta-mobile {
+    display: inline-flex;
+  }
+
+  #testimonials .testimonial-card:nth-child(n+4) {
+    display: none;
+  }
+
+  #projects .project-card:nth-child(n+5) {
+    display: none;
   }
 }
 
