@@ -95,7 +95,7 @@ const PROJECTS = [
     afterBill: "RM31,900 / month",
     projectCost: "RM770,000",
     payback: "2.8 - 3.4 years",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+    image: "./images/ikon-connaught.jpg"
   },
   {
     name: "BONIA Warehouse",
@@ -131,7 +131,7 @@ const PROJECTS = [
     afterBill: "RM9,100 / month",
     projectCost: "RM214,000",
     payback: "2.8 - 3.5 years",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+    image: "./images/dasher-office.jpg"
   },
   {
     name: "Eng Beng Manufacturing",
@@ -143,7 +143,7 @@ const PROJECTS = [
     afterBill: "RM166,500 / month",
     projectCost: "RM3,980,000",
     payback: "2.8 - 3.4 years",
-    image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80"
+    image: "./images/eng-beng.jpg"
   },
   {
     name: "ePARK Residence",
@@ -167,7 +167,7 @@ const PROJECTS = [
     afterBill: "RM36,700 / month",
     projectCost: "RM0 upfront",
     payback: "Immediate OPEX savings",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80"
+    image: "./images/integrated-formway.jpg"
   },
   {
     name: "Integrated Plastic Kogyo",
@@ -179,7 +179,7 @@ const PROJECTS = [
     afterBill: "RM19,400 / month",
     projectCost: "RM0 upfront",
     payback: "Immediate OPEX savings",
-    image: "https://images.unsplash.com/photo-1586528116493-0f20f9fe5fd3?auto=format&fit=crop&w=1200&q=80"
+    image: "./images/integrated-plastic-kogyo.jpg"
   }
 ];
 
