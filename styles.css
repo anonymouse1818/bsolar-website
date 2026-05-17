@@ -24,6 +24,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   background: linear-gradient(180deg, #f7f8fb 0%, #f2f5fa 42%, #f6f8fc 100%);
@@ -178,7 +182,7 @@ a {
   position: relative;
   background:
     linear-gradient(to bottom, rgba(8, 14, 26, 0.62) 0%, rgba(8, 14, 26, 0.48) 60%, rgba(8, 14, 26, 0.65) 100%),
-    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+    url("./images/hero.jpg") center/cover no-repeat;
 }
 
 .hero-inner {
